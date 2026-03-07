@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
+    <header>
+        <nav>
+            <a href="../index.html">home</a>
+            <a href="./about.html">about</a>
+            <a href="./shop.html">shop</a>
+            <a href="./contact.html">contact</a>
+        </nav>
+    </header>
+
     <section class="about-store">
         <div class="container">
             <h1>About Clothes For All</h1>
@@ -43,14 +53,44 @@
             <img src="https://www.shutterstock.com/image-photo/pasay-metro-manila-philippines-nov-600nw-2576427107.jpg"/>
         </article>
         <article>
-            <img src="https://sanctum.london/wp-content/webpc-passthru.php?src=https://sanctum.london/wp-content/uploads/2022/11/beyond-retro.jpg&nocache=1"/>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyisKz-aQs3ly9X4P9iUSxw4Cnw927BDKxASTk_f4nvd-jGXVVgrHK_aBD-aeGHgbKrdSOjRaa-_5A1_d9IgdUaiQoIrmLekN3YgPgm_WYonFJtH-JSkpeRYyNceqeBf-Op0aPFE7qJKCJ/s1600/P1180092-01.jpeg"/>
         </article>
         <article>
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyisKz-aQs3ly9X4P9iUSxw4Cnw927BDKxASTk_f4nvd-jGXVVgrHK_aBD-aeGHgbKrdSOjRaa-_5A1_d9IgdUaiQoIrmLekN3YgPgm_WYonFJtH-JSkpeRYyNceqeBf-Op0aPFE7qJKCJ/s1600/P1180092-01.jpeg"/>
+            <img src="https://sanctum.london/wp-content/webpc-passthru.php?src=https://sanctum.london/wp-content/uploads/2022/11/beyond-retro.jpg&nocache=1"/>"/>
         </article>
 
     </section>
 
+    <footer>
+        <p>Contact us at 012 345 6789</p>
+        <p>Email us at clothesforall@gmail.com</p>
+        <div class="social">
+            <a href="">Whatsapp</a>
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+        </div>
+        <p> 2026 Clothes For All</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const galleryItems = document.querySelectorAll(".gallery article")
+
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                })
+            }, { threshold: 0.1 })
+
+            galleryItems.forEach(item => {
+                revealOnScroll.observe(item);
+            })
+
+        })
+    </script>
+
 </body>
-    <h1>About Our Store</h1>
 </html>

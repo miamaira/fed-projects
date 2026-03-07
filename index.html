@@ -9,15 +9,15 @@
 <body>
     <header>
         <nav>
-            <a href="index.html"></a>
-            <a href="about.html"></a>
-            <a href="shop.html"></a>
-            <a href="contact.html"></a>
+            <a href="./index.html">home</a>
+            <a href="src/about.html">about</a>
+            <a href="src/shop.html">shop</a>
+            <a href="src/contact.html">contact</a>
         </nav>
     </header>
     <main>
         <h1>Clothes For All</h1>
-        <p>Welcom we are a shop that sells unique clothes in all shapes and sizes for all people
+        <p>Welcome we are a shop that sells unique clothes in all shapes and sizes for all people
             Any clothes that you can imagine, we have it.
         </p>
         <div class="best_seller">
@@ -38,32 +38,7 @@
             </section>
         </div>
     </main>
-
-    <script>
-        const container = document.querySelector(".products")
-        let autoScroll;
-        const scrollSteps= 320;
-        const intervalTime = 2500;
-
-        function stopScroll() {
-            autoScroll = setInterval(() =>{
-                const maxScroll = container.scrollWidth - container.clientWidth;
-                if (container.scrollLetf >= maxScroll -50) {
-                    container.scrollTo({left: 0, behavior: "smooth"})
-                } else {
-                    container.scrollBy({left: scrollStep, behavior: "smooth"})
-                }
-            }, intervalTime)
-        }
-        function stopScroll() {
-            clearInterval(autoScroll)
-        }
-
-        container.addEventListener("mouseenter", stopScroll)
-        container.addEventListener("mouseleave", startScroll)
-        startScroll()
-    </script>
-    <footer>
+<footer>
         <p>Contact us at 012 345 6789</p>
         <p>Email us at clothesforall@gmail.com</p>
         <div class="social">
@@ -73,5 +48,31 @@
         </div>
         <p> 2026 Clothes For All</p>
     </footer>
+
+    <script>
+        const container = document.querySelector(".products")
+        let autoScroll;
+        const scrollStep = 320;
+        const intervalTime = 2500;
+
+        function startScroll() {
+            autoScroll = setInterval(() => {
+                const maxScroll = container.scrollWidth - container.clientWidth;
+                if (container.scrollLeft >= maxScroll - 50) {
+                    container.scrollTo({left: 0, behavior: "smooth"})
+                } else {
+                    container.scrollBy({left: scrollStep, behavior: "smooth"})
+                }
+            }, intervalTime)
+        }
+
+        function stopScroll() {
+            clearInterval(autoScroll)
+}
+
+        container.addEventListener("mouseenter", stopScroll)
+        container.addEventListener("mouseleave", startScroll)
+        startScroll()
+    </script>
 </body>
 </html>

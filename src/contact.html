@@ -4,26 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Contact</h1>
+
+    <nav>
+            <a href="../index.html">home</a>
+            <a href="./about.html">about</a>
+            <a href="./contact.html">contact</a>
+    </nav>
+
+    
     <main>
-        <div class="phone_contact">
-            <p>Our Phone Number</p>
-            <p>012 345 6789</p>
+       <h1>Get help</h1>
+    <p>If you have a a question about your order we would love to help you</p>
+    <section class="contact-grid">
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Phone Number</h3>
+                <p>01 - 672 4681</p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <a href="mailto:clothesforall@gmail.com">clothesforall@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <h3>Business Hours</h3>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat - Sun: 10:00 AM -6:00 pm</p>
+            </div>
+            <div class="contact-item">
+                <div class="social">
+                    <a href="">Whatsapp</a>
+                    <a href="">Facebook</a>
+                    <a href="">Instagram</a>
+                </div>
+            </div>
         </div>
-        <div>
-            <p>Our Email</p>
-            <p>clothesforall@gmail.com</p>
+
+        <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form action="#">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="maira"></input>
+                </div>
+                <div class="form-group">
+                    <label for="name">Email</label>
+                    <input name="email" id="name" placeholder="clothesforall@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="name">Message</label>
+                    <textarea name="message" id="message" rows="S" placeholder="Write your message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn ">Send Message</button>
+            </form>
         </div>
-        <div>
-            <p>Our Social Media</p>
-            <span class="social_media">
-                <a href="">Whatsapp</a>
-                <a href="">Facebook</a>
-                <a href="">Instagram</a>
-            </span>
-        </div>
+    </section>
     </main>
+
+     <footer>
+        <p>Contact us at 012 345 6789</p>
+        <p>Email us at clothesforall@gmail.com</p>
+        <div class="social">
+            <a href="">Whatsapp</a>
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+        </div>
+        <p> 2026 Clothes For All</p>
+    </footer>
 </body>
 </html>
